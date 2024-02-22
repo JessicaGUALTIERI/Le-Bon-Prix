@@ -9,8 +9,16 @@ try {
 } catch (PDOException $e) {
     exit();
 }
+$stmt = $connexion->query('SELECT COUNT(*) AS total FROM item');
+$stmt->execute();
+$totalEntreesBDD = $stmt->fetch();
+$totalEntreesBDD = $totalEntreesBDD['total'];
 
-$stmt = $connexion->query('SELECT * FROM item WHERE id=1');
+$idRandom = rand(1, $totalEntreesBDD);
+
+$stmt = $connexion->query('SELECT * FROM item WHERE id='.$idRandom);
 $stmt->execute();
 $donnee = $stmt->fetch();
+
+
 ?>
