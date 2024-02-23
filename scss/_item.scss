@@ -1,7 +1,13 @@
 .item {
-    padding: 200px;
     img {
         max-height: 200px;
         max-width: 200px;
     }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }

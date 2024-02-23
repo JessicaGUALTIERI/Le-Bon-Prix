@@ -40,6 +40,11 @@ function displayItemPrice() {
     echo $donnee['prix'];
 }
 
+function displayItemTitle() {
+    global $donnee;
+    echo $donnee['nom'];
+}
+
 
 
 
