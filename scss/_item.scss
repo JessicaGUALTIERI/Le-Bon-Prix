@@ -1,13 +1,23 @@
-.item {
+.container {    
     img {
-        max-height: 200px;
-        max-width: 200px;
+        max-height: 400px;
+        max-width: 400px;
     }
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    .item {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            form {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    }
+    
 }
