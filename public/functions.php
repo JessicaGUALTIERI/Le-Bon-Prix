@@ -12,40 +12,44 @@ try {
 
 $idRandom;
 $donnee;
+$totalEntreesBDD = getCountOfItems();
+$idRandom = rand(1, $totalEntreesBDD);
+$itemImg = getItemImg($idRandom);
+$itemName = getItemName($idRandom);
+$itemPrice = getItemPrice($idRandom);
 
-pickItemId();
-
-function pickItemId() {
-    global $idRandom;
+function getCountOfItems() {
     global $connexion;
     $stmt = $connexion->query('SELECT COUNT(*) AS total FROM item');
     $stmt->execute();
     $totalEntreesBDD = $stmt->fetch();
     $totalEntreesBDD = $totalEntreesBDD['total'];
-    $idRandom = rand(1, $totalEntreesBDD);
+    return $totalEntreesBDD;
 }
 
-function displayItemImg() {
-    global $idRandom;
+function getItemImg($idRandom) {
     global $connexion;
-    global $donnee;
-    $stmt = $connexion->query('SELECT * FROM item WHERE id='.$idRandom);
+    $stmt = $connexion->query('SELECT img FROM item WHERE id='.$idRandom);
     $stmt->execute();
     $donnee = $stmt->fetch();
-    echo $donnee['img'];
+    return $donnee['img'];
 }
 
-function displayItemPrice() {
-    global $donnee;
-    echo $donnee['prix'];
+function getItemName($idRandom) {
+    global $connexion;
+    $stmt = $connexion->query('SELECT nom FROM item WHERE id='.$idRandom);
+    $stmt->execute();
+    $donnee = $stmt->fetch();
+    return $donnee['nom'];
 }
 
-function displayItemTitle() {
-    global $donnee;
-    echo $donnee['nom'];
+function getItemPrice($idRandom) {
+    global $connexion;
+    $stmt = $connexion->query('SELECT prix FROM item WHERE id='.$idRandom);
+    $stmt->execute();
+    $donnee = $stmt->fetch();
+    return $donnee['prix'];
 }
-
-
 
 
 ?>
