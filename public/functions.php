@@ -30,20 +30,19 @@ if (!isset($_SESSION['price'])) {
 if ($_POST) {
     if (!empty($_POST['nombreUtilisateur'])) {
         $nombreUtilisateur = $_POST['nombreUtilisateur'];
-        echo $nombreUtilisateur;
-    }
-    if ($nombreUtilisateur == $_SESSION['price']) {
-        echo '<script type="text/javascript">window.alert("🎉 Félicitations vous avez trouvé Le Bon Prix ! On rejoue ?");</script>';
-        session_unset();
-        header("refresh: 0");
-    } else if ($nombreUtilisateur > $_SESSION['price']) {
-        $wrongGuess = true;
-        $clue = "C'est moins que ".$nombreUtilisateur."€ !";
-    } else if ($nombreUtilisateur < $_SESSION['price']) {
-        $wrongGuess = true;
-        $clue = "C'est plus que ".$nombreUtilisateur."€ !";
-    } else {
-        $wrongGuess = false;
+        if ($nombreUtilisateur == $_SESSION['price']) {
+            echo '<script type="text/javascript">window.alert("🎉 Félicitations vous avez trouvé Le Bon Prix ! On rejoue ?");</script>';
+            session_unset();
+            header("refresh: 0");
+        } else if ($nombreUtilisateur > $_SESSION['price']) {
+            $wrongGuess = true;
+            $clue = "C'est moins que ".$nombreUtilisateur."€ !";
+        } else if ($nombreUtilisateur < $_SESSION['price']) {
+            $wrongGuess = true;
+            $clue = "C'est plus que ".$nombreUtilisateur."€ !";
+        } else {
+            $wrongGuess = false;
+        }
     }
 } 
 
