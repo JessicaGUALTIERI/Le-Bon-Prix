@@ -35,3 +35,6 @@ On essaie d'entrer 110€ :
 
 C'est gagné !
 ![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/victoire.png)
+
+On rejoue ?
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/nouveaujeu.png)
