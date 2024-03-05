@@ -18,6 +18,9 @@ Page d'accueil :
 Menu déroulant :
 ![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/menu.png)
 
+Les règles du jeu :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/regles.png)
+
 On essaie d'entrer 100€ :
 ![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/100.png)
 
