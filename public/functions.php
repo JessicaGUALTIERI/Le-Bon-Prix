@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
 require_once('connexion.php');
 $connexion;
@@ -14,9 +15,38 @@ $idRandom;
 $donnee;
 $totalEntreesBDD = getCountOfItems();
 $idRandom = rand(1, $totalEntreesBDD);
-$itemImg = getItemImg($idRandom);
-$itemName = getItemName($idRandom);
-$itemPrice = getItemPrice($idRandom);
+$nombreUtilisateur;
+$wrongGuess = false;
+$clue;
+if (!isset($_SESSION['img'])) {
+    $_SESSION['img'] = getItemImg($idRandom);
+}
+if (!isset($_SESSION['name'])) {
+    $_SESSION['name'] = getItemName($idRandom);
+}
+if (!isset($_SESSION['price'])) {
+    $_SESSION['price'] = getItemPrice($idRandom);
+}
+if ($_POST) {
+    if (!empty($_POST['nombreUtilisateur'])) {
+        $nombreUtilisateur = $_POST['nombreUtilisateur'];
+        echo $nombreUtilisateur;
+    }
+    if ($nombreUtilisateur == $_SESSION['price']) {
+        echo '<script type="text/javascript">window.alert("Félicitations vous avez trouvé Le Bon Prix !");</script>';
+        session_unset();
+        header("refresh: 0");
+    } else if ($nombreUtilisateur > $_SESSION['price']) {
+        $wrongGuess = true;
+        $clue = "C'est moins !";
+    } else if ($nombreUtilisateur < $_SESSION['price']) {
+        $wrongGuess = true;
+        $clue = "C'est plus !";
+    } else {
+        $wrongGuess = false;
+    }
+} 
+
 
 function getCountOfItems() {
     global $connexion;

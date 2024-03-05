@@ -1,7 +1,12 @@
 .rules {
     text-align: center;
     flex-direction: column;
-    line-height: 40px;
+    @media screen and (min-width: 768px) {
+        line-height: 40px;
+    } 
+    @media screen and (max-width: 767px) {
+        line-height: 25px;
+    } 
     p {
         margin-top: 30px;
     }
