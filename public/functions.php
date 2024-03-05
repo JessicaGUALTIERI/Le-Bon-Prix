@@ -33,15 +33,15 @@ if ($_POST) {
         echo $nombreUtilisateur;
     }
     if ($nombreUtilisateur == $_SESSION['price']) {
-        echo '<script type="text/javascript">window.alert("Félicitations vous avez trouvé Le Bon Prix !");</script>';
+        echo '<script type="text/javascript">window.alert("🎉 Félicitations vous avez trouvé Le Bon Prix ! On rejoue ?");</script>';
         session_unset();
         header("refresh: 0");
     } else if ($nombreUtilisateur > $_SESSION['price']) {
         $wrongGuess = true;
-        $clue = "C'est moins !";
+        $clue = "C'est moins que ".$nombreUtilisateur."€ !";
     } else if ($nombreUtilisateur < $_SESSION['price']) {
         $wrongGuess = true;
-        $clue = "C'est plus !";
+        $clue = "C'est plus que ".$nombreUtilisateur."€ !";
     } else {
         $wrongGuess = false;
     }
