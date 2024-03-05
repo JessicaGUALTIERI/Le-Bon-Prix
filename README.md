@@ -12,4 +12,26 @@ HTML, CSS, PHP, SCSS, Bootstrap, JavaScript, Gulp
 * Recours à Bootstrap et SCSS pour la partie Front-End (première pratique de responsive)
 
 ## 🔎 __À quoi ça ressemble ?__  
-![image]()
+Page d'accueil :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/accueil.png)
+
+Menu déroulant :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/menu.png)
+
+On essaie d'entrer 100€ :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/100.png)
+
+C'est plus que 100€ :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/+100.png)
+
+On essaie d'entrer 300€ :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/300.png)
+
+C'est moins que 300€ :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/-300.png)
+
+On essaie d'entrer 110€ :
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/110.png)
+
+C'est gagné !
+![image](https://github.com/JessicaGUALTIERI/Juste-Prix/blob/main/readme_img/victoire.png)
