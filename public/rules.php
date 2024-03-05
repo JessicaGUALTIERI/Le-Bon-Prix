@@ -3,8 +3,9 @@
     require('header.html');
 ?>
 
-<h1>Règles du jeu</h1>
-
+<div class="container">
+    <h1 class="title">Règles du jeu</h1>
+</div>
 
 <script src="js/bundle.js"></script>
 

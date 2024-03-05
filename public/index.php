@@ -8,7 +8,7 @@
     <div class="item">
         <img src="<?php displayItemImg() ?>" alt="illustration de l'item"/>
         <div class="desc">
-            <p class="title">
+            <p class="name">
                 <?php displayItemTitle(); ?>
                 <!--Prix = <?php displayItemPrice(); ?>-->
             </p>
