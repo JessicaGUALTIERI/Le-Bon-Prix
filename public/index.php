@@ -7,10 +7,12 @@
         <div class="item">
             <img src="<?= $_SESSION['img']; ?>" alt="illustration de l'item"/>
             <div class="desc">
-                <p class="name">
-                    <?= $_SESSION['name']; ?>
-                </p>
-                <p class="title clue">
+                <div class="name title">
+                    <p>
+                        <?= $_SESSION['name']; ?>
+                    </p>
+                </div>
+                <p class="clue">
                     <?php 
                         if ($wrongGuess) {
                             echo $clue;
