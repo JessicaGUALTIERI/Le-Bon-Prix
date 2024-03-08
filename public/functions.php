@@ -28,7 +28,7 @@ if (!isset($_SESSION['price'])) {
     $_SESSION['price'] = getItemPrice($idRandom);
 }
 if ($_POST) {
-    if (!empty($_POST['nombreUtilisateur'])) {
+    if (!empty($_POST['nombreUtilisateur']) && $_POST['nombreUtilisateur'] > 0) {
         $nombreUtilisateur = $_POST['nombreUtilisateur'];
         if ($nombreUtilisateur == $_SESSION['price']) {
             echo '<script type="text/javascript">window.alert("🎉 Félicitations vous avez trouvé Le Bon Prix ! On rejoue ?");</script>';
@@ -43,6 +43,9 @@ if ($_POST) {
         } else {
             $wrongGuess = false;
         }
+    } else {
+        $clue = "Je ne pense pas que ce soit gratuit...";
+        $wrongGuess = true;
     }
 } 
 
